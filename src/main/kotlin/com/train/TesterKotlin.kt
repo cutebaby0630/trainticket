@@ -10,11 +10,11 @@ fun main(){
     while(exit != -1){
 
         //使用者輸入總票數
-        println("Please enter number of tickets:")
+        print("Please enter number of tickets:")
         var ticketsnum = scanner.nextInt()
 
         //使用者輸入來回票張數
-        println("How many round-trip tickets: ")
+        print("How many round-trip tickets: ")
         val roundTrip = scanner.nextInt()
 
         //判斷輸入是否為有效張數
