@@ -15,26 +15,32 @@ fun main(){
 
         //使用者輸入來回票張數
         println("How many round-trip tickets: ")
-        var roundTrip = scanner.nextInt()
+        val roundTrip = scanner.nextInt()
 
         //判斷輸入是否為有效張數
-        if (ticketsnum < 1 || roundTrip < 0){
+        if (ticketsnum <= 0  || roundTrip < 0){
             println("Please enter the true number")
         }else{
             //印出結果
-            val tickets = Tickets(ticketsnum,roundTrip)
-            print("Total tickets: " + ticketsnum + "\n" + "Round-trip: " + roundTrip + "\n" + "Total: " + tickets.total())
+            val tickets = Ticket(ticketsnum,roundTrip)
+            println("Total tickets: " + ticketsnum )
+            println("Round-trip: " + roundTrip)
+            println("Total: " + tickets.total())
+
             //詢問是否繼續
             println("Continue to enter 0, Exit to enter -1")
             exit = scanner.nextInt()
         }
 
     }
+    println("Thanks to having")
 }
-class Tickets(var totaltickets: Int,var roundTripTickets: Int){
-    fun total(): Int{
-        //計算得到值並且回傳
-        val price = 1000 * (totaltickets-roundTripTickets) + round((2000 * roundTripTickets) * 0.9f)
-        return price
+
+
+class Ticket(var ticketsnum: Int, var roundTrip: Int){
+    fun total(): Int {
+        // 假設只有台北到高雄的票，單程票價1000元，來回票為2000元再打九折
+        val total = 1000 * (ticketsnum - roundTrip) + round((2000 * roundTrip) * 0.9f)
+        return total
     }
 }

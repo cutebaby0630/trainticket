@@ -18,7 +18,7 @@ public class Tester{
             int roundtrip = scanner.nextInt();
 
             //判斷輸入是否為有效張數
-            if (ticketsnum < 1 || roundtrip < 0 ){
+            if (ticketsnum <= 0 || roundtrip < 0 ){
                 System.out.println("Please enter the true number");
             }
             else {
