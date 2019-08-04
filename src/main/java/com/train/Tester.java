@@ -9,9 +9,10 @@ public class Tester{
             Scanner scanner = new Scanner(System.in);
             System.out.println("Please enter number of tickets:");
             int tickets_num = scanner.nextInt();
+
             System.out.println("How many round-trip tickets:");
             int round_trip = scanner.nextInt();
-            if (tickets_num < 1 ){
+            if (tickets_num < 1 || round_trip < 0 ){
                 System.out.println("Please enter the true number");
             }
             else {
