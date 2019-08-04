@@ -5,19 +5,27 @@ import java.util.Scanner;
 public class Tester{
     public static void main(String[] args) {
         int exit = 0;
+
         while (exit != -1){
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Please enter number of tickets:");
-            int tickets_num = scanner.nextInt();
 
+            //使用者輸入總票數
+            System.out.println("Please enter number of tickets:");
+            int ticketsnum = scanner.nextInt();
+
+            //使用者輸入來回票張數
             System.out.println("How many round-trip tickets:");
-            int round_trip = scanner.nextInt();
-            if (tickets_num < 1 || round_trip < 0 ){
+            int roundtrip = scanner.nextInt();
+
+            //判斷輸入是否為有效張數
+            if (ticketsnum < 1 || roundtrip < 0 ){
                 System.out.println("Please enter the true number");
             }
             else {
-                Tickets tickets = new Tickets(tickets_num,round_trip);
+                //印出結果
+                Tickets tickets = new Tickets(ticketsnum,roundtrip);
                 tickets.print();
+                //詢問是否繼續
                 System.out.println("Continue to enter 0, Exit to enter -1");
                 exit = scanner.nextInt();
             }
