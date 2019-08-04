@@ -5,9 +5,9 @@ public class Tickets {
     int roundTripTickets;
     int price;
 
-    public  Tickets(int total_tickets, int round_trip_tickets){
-        this.totaltickets = total_tickets;
-        this.roundTripTickets = round_trip_tickets;
+    public  Tickets(int ticketsnum, int roundtrip){
+        this.totaltickets = ticketsnum;
+        this.roundTripTickets = roundtrip;
     }
 
     public void print(){
