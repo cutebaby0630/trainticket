@@ -1,19 +1,19 @@
 package com.train;
 
 public class Tickets {
-    int totaltickets;
-    int roundTripTickets;
+    int ticketsNum;
+    int roundTrip;
     int price;
 
     public  Tickets(int ticketsnum, int roundtrip){
-        this.totaltickets = ticketsnum;
-        this.roundTripTickets = roundtrip;
+        this.ticketsNum = ticketsnum;
+        this.roundTrip = roundtrip;
     }
 
     public void print(){
-        price =  (int) ((totaltickets - roundTripTickets) * 1000 + roundTripTickets * 2000 * 0.9);
-        System.out.println("Total tickets:" + totaltickets );
-        System.out.println("Round-trip:" + roundTripTickets);
+        price =  (int) ((ticketsNum - roundTrip) * 1000 + roundTrip * 2000 * 0.9);
+        System.out.println("Total tickets:" + ticketsNum );
+        System.out.println("Round-trip:" + roundTrip);
         System.out.println("Total: " + price);
     }
 }
